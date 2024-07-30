@@ -10,10 +10,10 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { Dispatch, SetStateAction } from "react";
-
-import FileUpload from "../file-upload";
 import { Plus } from "lucide-react";
 import { Badge } from "@nextui-org/badge";
+
+import FileUpload from "../file-upload";
 
 type MessageFileProps = {
   fileUrl: string;
@@ -25,9 +25,9 @@ export default function MessageFile({ fileUrl, setFileUrl }: MessageFileProps) {
   return (
     <>
       <Badge
-        content={1}
-        color="success"
         className={`${fileUrl === "" && "hidden"} `}
+        color="success"
+        content={1}
       >
         <Button isIconOnly color="primary" onPress={onOpen}>
           <Plus />

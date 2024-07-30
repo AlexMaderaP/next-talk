@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 
 export async function getOrCreateConversation(
   profileOneId: string,
-  profileTwoId: string
+  profileTwoId: string,
 ) {
   let conversation =
     (await findConversation(profileOneId, profileTwoId)) ||
@@ -33,7 +33,7 @@ async function findConversation(profileOneId: string, profileTwoId: string) {
 
 async function createNewConversation(
   profileOneId: string,
-  profileTwoId: string
+  profileTwoId: string,
 ) {
   try {
     return await db.conversation.create({

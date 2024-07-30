@@ -19,6 +19,7 @@ export default async function Home() {
       profile.id === conversation.profileOneId
         ? conversation.profileTwoId
         : conversation.profileOneId;
+
     return redirect(`/conversations/${secondUserId}`);
   }
 

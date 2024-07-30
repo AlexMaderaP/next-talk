@@ -33,7 +33,7 @@ export function SocketProvider({ children }: { children: ReactNode }) {
       {
         path: "/api/socket/io",
         addTrailingslash: false,
-      }
+      },
     );
 
     socketInstance.on("connect", () => {

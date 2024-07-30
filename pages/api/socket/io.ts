@@ -1,4 +1,5 @@
 import { Server as NetServer } from "http";
+
 import { NextApiRequest } from "next";
 import { Server as ServerIO } from "socket.io";
 
@@ -18,6 +19,7 @@ function ioHandler(req: NextApiRequest, res: NextApiResponseServerIO) {
       path: path,
       addTrailingSlash: false,
     });
+
     res.socket.server.io = io;
   }
 

@@ -1,15 +1,15 @@
 "use client";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-
 import { Divider } from "@nextui-org/divider";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { Plus, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import axios from "axios";
-import MessageFile from "../modals/message-file";
 import { useState } from "react";
+
+import MessageFile from "../modals/message-file";
 
 type ChatInputProps = {
   conversationId: string;

@@ -1,8 +1,9 @@
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+
 import ChatHeader from "@/components/chat/chat-header";
 import { currentProfile } from "@/lib/current-profile";
 import { getOrCreateConversation } from "@/lib/lib";
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import ChatInput from "@/components/chat/chat-input";
 
 type ConversationPageProps = {
@@ -22,7 +23,7 @@ export default async function ConversationPage({
 
   const conversation = await getOrCreateConversation(
     profile.id,
-    params.secondUserId
+    params.secondUserId,
   );
 
   if (!conversation) {
