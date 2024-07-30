@@ -10,7 +10,9 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { useEffect, useState } from "react";
+
 import UserCard from "../user-card";
+
 import { User } from "@/types";
 
 export default function CreateConversation() {
@@ -23,6 +25,7 @@ export default function CreateConversation() {
       try {
         const response = await fetch("/api/users");
         const data = await response.json();
+
         setUsers(data);
         setLoading(false);
       } catch (error) {
@@ -36,13 +39,13 @@ export default function CreateConversation() {
 
   return (
     <>
-      <Button onPress={onOpen} color="primary">
+      <Button color="primary" onPress={onOpen}>
         Start a conversation!
       </Button>
       <Modal
+        className="self-center"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        className="self-center"
       >
         <ModalContent>
           {(onClose) => (

@@ -13,10 +13,11 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Input } from "@nextui-org/input";
-import FileUpload from "../file-upload";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+
+import FileUpload from "../file-upload";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Server name is required." }),
@@ -53,15 +54,16 @@ export default function InitalModal() {
       console.log(error);
     }
   }
+
   return (
     <>
-      <Button onPress={onOpen} color="primary">
+      <Button color="primary" onPress={onOpen}>
         Create Server
       </Button>
       <Modal
+        className="self-center"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        className="self-center"
       >
         <ModalContent>
           {(onClose) => (
@@ -74,22 +76,21 @@ export default function InitalModal() {
                   onChange={setImageUrl}
                 />
                 <Input
-                  autoFocus
                   {...form.register("name")}
+                  errorMessage={errors.name?.message}
+                  isInvalid={!!errors.name}
                   label="Name"
                   placeholder="Enter your server name"
                   variant="bordered"
-                  isInvalid={!!errors.name}
-                  errorMessage={errors.name?.message}
                 />
                 <Input
-                  value={imageUrl}
-                  label="Image"
-                  placeholder="Choose file or drag to box"
                   disabled
                   readOnly
-                  isInvalid={!!errors.imageUrl}
                   errorMessage={errors.imageUrl?.message}
+                  isInvalid={!!errors.imageUrl}
+                  label="Image"
+                  placeholder="Choose file or drag to box"
+                  value={imageUrl}
                 />
               </ModalBody>
               <ModalFooter>

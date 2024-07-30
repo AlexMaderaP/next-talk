@@ -2,10 +2,11 @@
 
 import "@uploadthing/react/styles.css";
 import { Dispatch, SetStateAction } from "react";
-import { UploadDropzone } from "@/lib/uploadthing";
 import { Image } from "@nextui-org/image";
 import { X } from "lucide-react";
 import NextImage from "next/image";
+
+import { UploadDropzone } from "@/lib/uploadthing";
 
 type FileUploadProps = {
   endpoint: "messageFile" | "serverImage";
@@ -24,11 +25,11 @@ export default function FileUpload({
     return (
       <div className="relative">
         <Image
-          as={NextImage}
-          width={300}
-          height={200}
           alt="uploaded-image"
+          as={NextImage}
+          height={200}
           src={value}
+          width={300}
         />
         <button
           className="bg-rose-500 text-white p-1 rounded-full absolute top-0 right-0 shadow-sm z-30"

@@ -1,9 +1,10 @@
-import { User } from "@/types";
 import { Avatar } from "@nextui-org/avatar";
 import { Card, CardHeader } from "@nextui-org/card";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React from "react";
+
+import { User } from "@/types";
 
 type UserCardProps = {
   user: User;
@@ -21,6 +22,7 @@ export default function UserCard({ user }: UserCardProps) {
       console.log(error);
     }
   }
+
   return (
     <Card
       fullWidth

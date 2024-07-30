@@ -7,13 +7,13 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import NextLink from "next/link";
+import { UserButton } from "@clerk/nextjs";
+import { experimental__simple, shadesOfPurple } from "@clerk/themes";
+import { useTheme } from "next-themes";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, Logo } from "@/components/icons";
-import { UserButton } from "@clerk/nextjs";
-import { experimental__simple, shadesOfPurple } from "@clerk/themes";
-import { useTheme } from "next-themes";
 
 export const Navbar = () => {
   const { theme } = useTheme();

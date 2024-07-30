@@ -1,8 +1,8 @@
+import { redirect } from "next/navigation";
+
 import { title } from "@/components/primitives";
 import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initial-profile";
-import { redirect } from "next/navigation";
-
 import CreateConversation from "@/components/modals/create-conversation-modal";
 
 export default async function Home() {
