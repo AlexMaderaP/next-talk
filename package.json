@@ -13,6 +13,7 @@
 		"@clerk/themes": "^2.1.14",
 		"@hookform/resolvers": "^3.9.0",
 		"@nextui-org/avatar": "^2.0.32",
+		"@nextui-org/badge": "^2.0.31",
 		"@nextui-org/button": "2.0.37",
 		"@nextui-org/card": "^2.0.33",
 		"@nextui-org/code": "2.0.32",

@@ -3,7 +3,7 @@ import { currentProfile } from "@/lib/current-profile";
 import { getOrCreateConversation } from "@/lib/lib";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import React from "react";
+import ChatInput from "@/components/chat/chat-input";
 
 type ConversationPageProps = {
   params: {
@@ -35,6 +35,8 @@ export default async function ConversationPage({
   return (
     <div className="flex flex-col h-full flex-grow">
       <ChatHeader name={otherProfile.email} />
+      <div className="flex-1">Future Messages</div>
+      <ChatInput conversationId={conversation.id} />
     </div>
   );
 }

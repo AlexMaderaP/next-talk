@@ -1,5 +1,6 @@
 import { Avatar } from "@nextui-org/avatar";
 import { Divider } from "@nextui-org/divider";
+import SocketIndicator from "../socket-indicator";
 
 interface ChatHeaderProps {
   name: string;
@@ -14,6 +15,7 @@ export default function ChatHeader({ name, imageUrl }: ChatHeaderProps) {
         <p className="font-semibold text-md text-black dark:text-white">
           {name}
         </p>
+        <SocketIndicator />
       </div>
       <Divider />
     </>

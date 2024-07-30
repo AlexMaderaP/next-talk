@@ -11,7 +11,7 @@ import {
 } from "@nextui-org/modal";
 import { useEffect, useState } from "react";
 
-import UserCard from "../user-card";
+import UserCard from "./user-card";
 
 import { User } from "@/types";
 
