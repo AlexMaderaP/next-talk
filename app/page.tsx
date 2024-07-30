@@ -15,7 +15,11 @@ export default async function Home() {
   });
 
   if (conversation) {
-    return redirect(`/conversations`);
+    const secondUserId =
+      profile.id === conversation.profileOneId
+        ? conversation.profileTwoId
+        : conversation.profileOneId;
+    return redirect(`/conversations/${secondUserId}`);
   }
 
   return (

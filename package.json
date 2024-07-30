@@ -16,6 +16,7 @@
 		"@nextui-org/button": "2.0.37",
 		"@nextui-org/card": "^2.0.33",
 		"@nextui-org/code": "2.0.32",
+		"@nextui-org/divider": "^2.0.31",
 		"@nextui-org/image": "^2.0.31",
 		"@nextui-org/input": "2.2.4",
 		"@nextui-org/kbd": "2.0.33",
@@ -41,6 +42,8 @@
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"react-hook-form": "^7.52.1",
+		"socket.io": "^4.7.5",
+		"socket.io-client": "^4.7.5",
 		"uploadthing": "^6.13.2",
 		"uuid": "^10.0.0",
 		"zod": "^3.23.8"
